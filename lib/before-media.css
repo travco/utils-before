@@ -5,13 +5,13 @@
  * Intentional redundancy build into each set of unit classes.
  */
 
-@each $any, $b in --mediaBreakpoints {
+@each $any, $b in --var(mediaBreakpoints) {
   @media (-$(any)viewport) {
     .u$(any)beforeNone {
       margin-left: 0 !important;
     }
 
-    @for $j from 2 to --maxDivisions {
+    @for $j from 2 to --var(maxDivisions) {
       @for $i from 1 to $j {
         .u$(any)before$(i)of$(j) {
           margin-left: calc(100% * $(i) / $(j)) !important;

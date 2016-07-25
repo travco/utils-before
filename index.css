@@ -1,4 +1,12 @@
 @import "./lib/before.css";
-@import "./lib/before-sm.css";
-@import "./lib/before-md.css";
-@import "./lib/before-lg.css";
+@import "./lib/before-media.css";
+@custom-media --xsm-viewport (min-width:120px) and (max-width:320px);
+@custom-media --sm-viewport (min-width:320px) and (max-width:640px);
+@custom-media --md-viewport (min-width:640px) and (max-width:960px);
+@custom-media --lg-viewport (min-width:960px) and (max-width:1920px);
+@custom-media --xlg-viewport (min-width:1920px);
+
+:root {
+	--maxDivisions: 12;
+	--mediaBreakpoints: -xsm-, -sm-, -md-, -lg-, -xlg-;
+}

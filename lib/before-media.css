@@ -1,0 +1,22 @@
+/**
+ * @define utilities
+ *
+ * Specify the proportional offset before an element.
+ * Intentional redundancy build into each set of unit classes.
+ */
+
+@each $any, $b in --mediaBreakpoints {
+  @media (-$(any)viewport) {
+    .u$(any)beforeNone {
+      margin-left: 0 !important;
+    }
+
+    @for $j from 2 to --maxDivisions {
+      @for $i from 1 to $j {
+        .u$(any)before$(i)of$(j) {
+          margin-left: calc(100% * $(i) / $(j)) !important;
+        }
+      }
+    }
+  }
+}

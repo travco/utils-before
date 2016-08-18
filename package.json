@@ -11,7 +11,7 @@
   "devDependencies": {
     "stylelint-config-suitcss": "^4.0.0",
     "suitcss-components-test": "*",
-    "suitcss-preprocessor": "git://github.com/travco/preprocessor.git#1af03b8"
+    "suitcss-preprocessor": "git://github.com/travco/preprocessor.git#b0a98a9"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
